@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tech-challenge-4soat-g48-api
+spec:
+  selector:
+    app: tech-challenge-4soat-g48-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

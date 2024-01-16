@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tech-challenge-4soat-g48-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tech-challenge-4soat-g48-api
+  template:
+    metadata:
+      labels:
+        app: tech-challenge-4soat-g48-api
+    spec:
+      containers:
+      - name: tech-challenge-4soat-g48-api
+        image: biaggioan/tech-chalange:1.0.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: tech-challenge-4soat-g48-api-config
