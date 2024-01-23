@@ -4,16 +4,6 @@ metadata:
   name: tech-challenge-4soat-g48-api-config
 data:
   APP_ENV: production
-  DATABASE_HOST: admin
-  DATABASE_PORT: "5432"
-  DATABASE_NAME: tc_soat4_g48
-  application.properties: |
-    server.port=8081
-    spring.datasource.driver-class-name=org.postgresql.Driver
-    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL10Dialect
-    spring.jpa.hibernate.ddl-auto=update
-    spring.jpa.show-sql=true
-    spring.output.ansi.enabled=ALWAYS
-    springdoc.api-docs.path=/api-docs
-    springdoc.swagger-ui.path=/swagger-ui-custom.html
-    logging.file.name=logs/grupo48.log
+  SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tc_soat4_g48
+  SPRING_DATASOURCE_USERNAME: admin
+  SPRING_DATASOURCE_PASSWORD: senha48
