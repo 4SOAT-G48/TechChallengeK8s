@@ -1,4 +1,4 @@
-apiVersion: api/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
@@ -21,5 +21,9 @@ spec:
         - secretRef:
             name: postgres-secrets
         volumeMounts:
-        - name: postgres-storage
+        - name: postgres-pv
           mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres-pv
+        persistentVolumeClaim:
+          claimName: postgres-pvc
