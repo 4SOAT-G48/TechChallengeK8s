@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tech-challenge-4soat-g48-api
+  name: kubernetes-api-v1
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tech-challenge-4soat-g48-api
+      app: kubernetes-api-v1
   template:
     metadata:
       labels:
-        app: tech-challenge-4soat-g48-api
+        app: kubernetes-api-v1
     spec:
       containers:
-      - name: tech-challenge-4soat-g48-api
-        image: biaggioan/tech-chalange:1.0.0
+      - name: kubernetes-api-v1
+        image: mateuslima/fiap_api:v1
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-            name: tech-challenge-4soat-g48-api-config
+            name: kubernetes-api-v1-config
         resources:
           requests:
             memory: "64Mi"
