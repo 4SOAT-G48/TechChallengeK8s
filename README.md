@@ -51,17 +51,17 @@ minikube start
    ```sh
     kubectl apply -f food-delivery/persistent-volume-claim
    ```
-    4. Inicialize a pasta de deployment com o seguinte comando:
+    4. Inicialize a pasta de service com o seguinte comando:
+   ```sh
+    kubectl apply -f food-delivery/service
+   ```
+    5. Inicialize a pasta de deployment com o seguinte comando:
    ```sh
     kubectl apply -f food-delivery/deployment
    ```
-    5. Inicialize a pasta de HPA com o seguinte comando:
+    6. Inicialize a pasta de HPA com o seguinte comando:
    ```sh
     kubectl apply -f food-delivery/horizontal-pod-autoscaler
-   ```
-    6. Inicialize a pasta de service com o seguinte comando:
-   ```sh
-    kubectl apply -f food-delivery/service
    ```
 
 3. Pronto, sua aplicacao em Kubernetes esta devidamente ativa.
