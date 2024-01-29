@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-api-v1
+  name: kubernetes-api-v2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: kubernetes-api-v1
+      app: kubernetes-api-v2
   template:
     metadata:
       labels:
-        app: kubernetes-api-v1
+        app: kubernetes-api-v2
     spec:
       containers:
-      - name: kubernetes-api-v1
+      - name: kubernetes-api-v2
         image: mateuslima/fiap_api:v2
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-            name: kubernetes-api-v1-config
+            name: kubernetes-api-v2-config
         resources:
           requests:
             memory: "64Mi"
