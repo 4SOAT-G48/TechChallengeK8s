@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: kubernetes-api-v2
-        image: mateuslima/fiap_api:v2
+        image: mateuslima/fiap_api:v2.1
         ports:
         - containerPort: 8080
         envFrom:
